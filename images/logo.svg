@@ -1,16 +1,19 @@
-<svg width="400" height="200" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="200" fill="white"/>
-  
-  <g transform="translate(80, 70)">
-    <path d="M0 4 C0 1.8 1.8 0 4 0 H28 V56 H4 C1.8 56 0 54.2 0 52 Z" fill="#0039A6"/>
-    
-    <path d="M22 4 C22 1.8 23.8 0 26 0 H68 C70.2 0 72 1.8 72 4 V12 C72 14.2 70.2 16 68 16 H22 Z" fill="#29B6F6"/>
-    
-    <path d="M34 20 H50 C52.2 20 54 21.8 54 24 V52 C54 54.2 52.2 56 50 56 H34 C31.8 56 30 54.2 30 52 V20 Z" fill="#29B6F6"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="400" height="150">
+  <!-- الخلفية -->
+  <rect width="100%" height="100%" fill="white"/>
 
-  <g transform="translate(162, 105)">
-    <text x="0" y="0" font-family="Arial, sans-serif" font-weight="bold" font-size="38" fill="#0039A6">Iram</text>
-    <text x="0" y="28" font-family="Arial, sans-serif" font-size="20" fill="#455A64">For Technology</text>
-  </g>
-</svg>
+  <!-- شكل الحرف L -->
+  <rect x="40" y="50" width="35" height="60" rx="4" fill="#0047AB"/>
+  
+  <!-- شكل الحرف T -->
+  <rect x="80" y="50" width="55" height="20" rx="4" fill="#00AEEF"/>
+  <rect x="105" y="70" width="30" height="40" rx="4" fill="#00AEEF"/>
+
+  <!-- النص -->
+  <text x="160" y="85" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#0047AB">
+    Iram
+  </text>
+  <text x="160" y="115" font-family="Arial, sans-serif" font-size="20" fill="#4A4A4A">
+    For Technology
+  </text>
+</svg
