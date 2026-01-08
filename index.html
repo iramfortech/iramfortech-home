@@ -8,13 +8,15 @@
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
 <body>
+
+  <!-- الخلفية المتحركة -->
+  <div class="background-pattern"></div>
+
   <header>
-    <div class="container">
-      <img src="images/logo.svg" alt="Iram For Technology Logo" class="logo">
-      <h1>Iram For Technology</h1>
-      <p>حلول برمجية حديثة، أنظمة رقمية موثوقة، وتصاميم تطبيقات عصرية.</p>
-    </div>
+    <img src="images/logo.svg" alt="Iram Logo" class="logo">
+    <h1>Iram For Technology</h1>
     <button id="theme-toggle">تبديل الوضع 🌙</button>
+    <p>حلول برمجية حديثة، أنظمة رقمية موثوقة، وتصاميم تطبيقات عصرية.</p>
   </header>
 
   <main>
@@ -33,7 +35,7 @@
     <section class="contact">
       <div class="container">
         <h2>تواصل معنا</h2>
-        <p>البريد الإلكتروني: iramfortec@gmail.com</p>
+        <p>البريد الإلكتروني: iramfortech@gmail.com</p>
         <p>GitHub: <a href="https://github.com/iramfortech">iramfortech</a></p>
       </div>
     </section>
@@ -44,12 +46,14 @@
       <p>&copy; 2026 Iram For Technology. جميع الحقوق محفوظة.</p>
     </div>
   </footer>
+
+  <!-- زر التبديل -->
   <script>
-const toggle = document.getElementById('theme-toggle');
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-});
-</script>
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 
 </body>
 </html>
