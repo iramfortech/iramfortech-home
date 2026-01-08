@@ -1,16 +1,68 @@
-## Hi there 👋
+# Iram For Technology
 
-<!--
-**iramfortech/iramfortech** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**Iram For Technology** is a modern software-focused initiative building reliable, scalable, and clean digital solutions.
 
-Here are some ideas to get you started:
+We focus on creating applications, systems, and tools that follow solid engineering principles, modern UI/UX standards, and long-term maintainability.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+---
+
+## 🚀 What We Do
+
+- Software & Application Development  
+- Mobile Apps (Flutter, Cross-platform)  
+- Web Systems & Dashboards  
+- Digital Infrastructure & Modular Systems  
+- Clean UI / UX Engineering  
+
+---
+
+## 🧠 Design & Engineering Principles
+
+- Minimal, functional design
+- Scalable architecture
+- Modular and reusable components
+- Performance-aware development
+- App-first and system-oriented thinking
+
+---
+
+## 🛠️ Technologies
+
+- Flutter / Dart  
+- Web Technologies (HTML, CSS, JavaScript)  
+- REST APIs  
+- Git & GitHub  
+- Modern UI Systems  
+
+*(This list will grow as projects evolve)*
+
+---
+
+## 🎨 Brand Identity
+
+- **Primary Color:** Deep Blue `#1E3A8A`
+- **Secondary Color:** Soft Cyan `#38BDF8`
+- **Design Style:** Minimal, flat, scalable
+- **Typography:** Inter / Manrope / IBM Plex Sans
+
+---
+
+## 📂 Projects
+
+This organization will host:
+- Open-source tools
+- Application templates
+- Experiments and internal systems
+- Production-ready projects
+
+---
+
+## 📫 Contact
+
+If you are interested in collaboration or development work:
+
+- GitHub: https://github.com/iram-for-technology
+
+---
+
+> Built with clarity, not noise.
