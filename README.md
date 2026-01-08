@@ -34,15 +34,6 @@ We focus on creating applications, systems, and tools that follow solid engineer
 
 ---
 
-## 🎨 Brand Identity
-
-- **Primary Color:** Deep Blue `#1E3A8A`
-- **Secondary Color:** Soft Cyan `#38BDF8`
-- **Design Style:** Minimal, flat, scalable
-- **Typography:** Inter / Manrope / IBM Plex Sans
-
----
-
 ## 📂 Projects
 
 This organization will host:
