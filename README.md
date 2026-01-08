@@ -9,8 +9,7 @@ We focus on creating applications, systems, and tools that follow solid engineer
 ## 🚀 What We Do
 
 - Software & Application Development  
-- Mobile Apps (Flutter, Cross-platform)  
-- Web Systems & Dashboards  
+- Mobile Apps (Flutter, Cross-platform)
 - Digital Infrastructure & Modular Systems  
 - Clean UI / UX Engineering  
 
@@ -28,13 +27,10 @@ We focus on creating applications, systems, and tools that follow solid engineer
 
 ## 🛠️ Technologies
 
-- Flutter / Dart  
-- Web Technologies (HTML, CSS, JavaScript)  
+- Flutter / Dart 
 - REST APIs  
 - Git & GitHub  
 - Modern UI Systems  
-
-*(This list will grow as projects evolve)*
 
 ---
 
