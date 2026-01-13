@@ -35,3 +35,23 @@
     margin-left: 0;
     margin-right: 1rem;
 }
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s;
+}
+
+.lang-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* لضمان تناسق الخطوط */
+[lang="en"] body { font-family: 'Inter', sans-serif; }
+[lang="ar"] body { font-family: 'Cairo', sans-serif; }
