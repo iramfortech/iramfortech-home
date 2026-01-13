@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iram For Technology</title>
+    <title>Iram For Technology | حلول رقمية مبتكرة</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="background-pattern"></div>
 
     <nav class="navbar">
         <div class="container nav-container">
@@ -16,19 +18,22 @@
                 <li><a href="#services" data-i18n="nav-services">خدماتنا</a></li>
                 <li><a href="#contact" data-i18n="nav-contact">تواصل معنا</a></li>
             </ul>
-            <div class="nav-controls">
-                <button id="lang-toggle">English</button>
-                <button id="theme-toggle">🌙</button>
+            <div class="nav-controls" style="display: flex; gap: 15px; align-items: center;">
+                <button id="lang-toggle" class="lang-btn">English</button>
+                <button id="theme-toggle" style="background:none; border:none; cursor:pointer; font-size:1.5rem;">🌙</button>
             </div>
         </div>
     </nav>
 
     <header class="hero">
         <div class="container">
-            <h1 data-i18n="hero-title">مستقبل التقنية يبدأ مع <span class="highlight">Iram</span></h1>
-            <p data-i18n="hero-desc">نحن نبني الحلول البرمجية التي تدفع عملك نحو القمة باستخدام أحدث التقنيات العالمية.</p>
-            <div class="hero-btns">
-                <a href="#services" class="btn primary-btn" data-i18n="btn-explore">اكتشف خدماتنا</a>
+            <div class="hero-content">
+                <h1 data-i18n="hero-title">مستقبل التقنية يبدأ مع <span class="highlight">Iram</span></h1>
+                <p data-i18n="hero-desc">نحن نبني الحلول البرمجية التي تدفع عملك نحو القمة باستخدام أحدث التقنيات العالمية.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn primary-btn" data-i18n="btn-services">اكتشف خدماتنا</a>
+                    <a href="#contact" class="btn secondary-btn" data-i18n="btn-contact">تواصل الآن</a>
+                </div>
             </div>
         </div>
     </header>
@@ -40,44 +45,81 @@
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="icon">📱</div>
-                        <h3 data-i18n="service-1-title">تطوير تطبيقات Flutter</h3>
-                        <p data-i18n="service-1-desc">تطبيقات سريعة وعصرية تعمل على Android و iOS بكفاءة عالية.</p>
+                        <h3 data-i18n="s1-t">تطوير تطبيقات Flutter</h3>
+                        <p data-i18n="s1-d">تطبيقات سريعة وعصرية تعمل على Android و iOS بكفاءة عالية.</p>
                     </div>
                     <div class="service-card">
                         <div class="icon">💻</div>
-                        <h3 data-i18n="service-2-title">تطوير المواقع والأنظمة</h3>
-                        <p data-i18n="service-2-desc">بناء منصات ويب متكاملة، آمنة، وقابلة للتوسع لتناسب احتياجاتكم.</p>
+                        <h3 data-i18n="s2-t">تطوير المواقع والأنظمة</h3>
+                        <p data-i18n="s2-d">بناء منصات ويب متكاملة، آمنة، وقابلة للتوسع لتناسب احتياجاتكم.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🎨</div>
+                        <h3 data-i18n="s3-t">تصميم واجهات UI/UX</h3>
+                        <p data-i18n="s3-d">تجربة مستخدم فريدة تضمن تفاعل العملاء مع منتجك الرقمي بسلاسة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2 data-i18n="contact-title">لنبدأ مشروعك القادم</h2>
+                    <p data-i18n="contact-desc">فريقنا مستعد لتحويل فكرتك إلى واقع تقني ملموس.</p>
+                    <a href="mailto:iramfortech@gmail.com" class="email-link">iramfortech@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://github.com/iramfortech">GitHub Profile</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="container">
+            <p data-i18n="footer-text">&copy; 2026 Iram For Technology. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
     <script>
+        // نظام الترجمة
         const translations = {
             ar: {
                 "nav-services": "خدماتنا",
                 "nav-contact": "تواصل معنا",
                 "hero-title": "مستقبل التقنية يبدأ مع <span class='highlight'>Iram</span>",
                 "hero-desc": "نحن نبني الحلول البرمجية التي تدفع عملك نحو القمة باستخدام أحدث التقنيات العالمية.",
-                "btn-explore": "اكتشف خدماتنا",
+                "btn-services": "اكتشف خدماتنا",
+                "btn-contact": "تواصل الآن",
                 "services-title": "خدماتنا المتميزة",
-                "service-1-title": "تطوير تطبيقات Flutter",
-                "service-1-desc": "تطبيقات سريعة وعصرية تعمل على Android و iOS بكفاءة عالية.",
-                "service-2-title": "تطوير المواقع والأنظمة",
-                "service-2-desc": "بناء منصات ويب متكاملة، آمنة، وقابلة للتوسع لتناسب احتياجاتكم."
+                "s1-t": "تطوير تطبيقات Flutter",
+                "s1-d": "تطبيقات سريعة وعصرية تعمل على Android و iOS بكفاءة عالية.",
+                "s2-t": "تطوير المواقع والأنظمة",
+                "s2-d": "بناء منصات ويب متكاملة، آمنة، وقابلة للتوسع لتناسب احتياجاتكم.",
+                "s3-t": "تصميم واجهات UI/UX",
+                "s3-d": "تجربة مستخدم فريدة تضمن تفاعل العملاء مع منتجك الرقمي بسلاسة.",
+                "contact-title": "لنبدأ مشروعك القادم",
+                "contact-desc": "فريقنا مستعد لتحويل فكرتك إلى واقع تقني ملموس.",
+                "footer-text": "© 2026 Iram For Technology. جميع الحقوق محفوظة."
             },
             en: {
                 "nav-services": "Services",
-                "nav-contact": "Contact",
-                "hero-title": "Future of Tech Starts with <span class='highlight'>Iram</span>",
-                "hero-desc": "We build software solutions that push your business to the top using world-class technologies.",
-                "btn-explore": "Explore Services",
+                "nav-contact": "Contact Us",
+                "hero-title": "The Future of Tech Starts with <span class='highlight'>Iram</span>",
+                "hero-desc": "We build software solutions that drive your business to the top using the latest global technologies.",
+                "btn-services": "Our Services",
+                "btn-contact": "Contact Now",
                 "services-title": "Our Premium Services",
-                "service-1-title": "Flutter App Development",
-                "service-1-desc": "Modern and fast apps for Android and iOS with high efficiency.",
-                "service-2-title": "Web & Systems Development",
-                "service-2-desc": "Building integrated, secure, and scalable web platforms for your needs."
+                "s1-t": "Flutter App Development",
+                "s1-d": "Fast and modern apps that work on Android and iOS with high efficiency.",
+                "s2-t": "Web & Systems Development",
+                "s2-d": "Building integrated, secure, and scalable web platforms for your needs.",
+                "s3-t": "UI/UX Design",
+                "s3-d": "A unique user experience that ensures customer interaction with your digital product.",
+                "contact-title": "Let's Start Your Next Project",
+                "contact-desc": "Our team is ready to turn your idea into a tangible technical reality.",
+                "footer-text": "© 2026 Iram For Technology. All rights reserved."
             }
         };
 
@@ -87,24 +129,21 @@
 
         langToggle.addEventListener('click', () => {
             currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            
-            // تغيير خصائص الصفحة
             htmlTag.setAttribute('lang', currentLang);
             htmlTag.setAttribute('dir', currentLang === 'ar' ? 'rtl' : 'ltr');
             langToggle.textContent = currentLang === 'ar' ? 'English' : 'العربية';
 
-            // تحديث النصوص
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                element.innerHTML = translations[currentLang][key];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.innerHTML = translations[currentLang][key];
             });
         });
 
-        // كود الـ Dark Mode السابق
-        const themeToggle = document.getElementById('theme-toggle');
-        themeToggle.addEventListener('click', () => {
+        // الوضع الليلي
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
-            themeToggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
         });
     </script>
 </body>
