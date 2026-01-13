@@ -1,172 +1,37 @@
-/* ================== VARIABLES ================== */
-:root {
-    --primary: #1E3A8A;
-    --accent: #38BDF8;
-    --bg-light: #F8FAFC;
-    --text-main: #1E293B;
-    --card-bg: #FFFFFF;
-    --transition: all 0.3s ease;
-}
-
-.dark-mode {
-    --primary: #38BDF8;
-    --accent: #7DD3FC;
-    --bg-light: #0B1220;
-    --text-main: #F1F5F9;
-    --card-bg: #1E293B;
-}
-
-/* ================== GENERAL ================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+/* تغيير الخط بناءً على اللغة */
+[lang="ar"] {
     font-family: 'Cairo', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    line-height: 1.6;
-    transition: var(--transition);
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+[lang="en"] {
+    font-family: 'Inter', sans-serif;
 }
 
-/* ================== NAVBAR ================== */
-.navbar {
-    background: var(--card-bg);
-    padding: 1rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.nav-container {
+/* تحسين شكل أزرار التحكم */
+.nav-controls {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
     align-items: center;
 }
 
-.nav-logo {
-    height: 50px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-/* ================== HERO SECTION ================== */
-.hero {
-    padding: 6rem 0;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.highlight {
+#lang-toggle {
+    background: transparent;
+    border: 1px solid var(--primary);
     color: var(--primary);
-}
-
-.hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto 2rem;
-    opacity: 0.8;
-}
-
-.btn {
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
     font-weight: bold;
-    display: inline-block;
     transition: var(--transition);
 }
 
-.primary-btn {
+#lang-toggle:hover {
     background: var(--primary);
-    color: #fff;
-    margin-left: 1rem;
+    color: white;
 }
 
-.secondary-btn {
-    border: 2px solid var(--primary);
-    color: var(--primary);
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* ================== SERVICES GRID ================== */
-.services {
-    padding: 4rem 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.service-card {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 20px;
-    text-align: center;
-    transition: var(--transition);
-    border: 1px solid rgba(0,0,0,0.05);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
-}
-
-.service-card .icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-/* ================== FOOTER ================== */
-footer {
-    padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    margin-top: 4rem;
-}
-
-/* ================== MOBILE RESPONSIVE ================== */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .nav-links { display: none; }
+/* موازنة المسافات في الوضع الإنجليزي (LTR) */
+[dir="ltr"] .primary-btn {
+    margin-left: 0;
+    margin-right: 1rem;
 }
