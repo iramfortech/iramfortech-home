@@ -1,59 +1,90 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Iram For Technology</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iram For Technology | حلول رقمية مبتكرة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- الخلفية المتحركة -->
-  <div class="background-pattern"></div>
+    <div class="background-pattern"></div>
 
-  <header>
-    <img src="images/logo.svg" alt="Iram Logo" class="logo">
-    <h1>Iram For Technology</h1>
-    <button id="theme-toggle">🌙</button>
-    <p>حلول برمجية حديثة، أنظمة رقمية موثوقة، وتصاميم تطبيقات عصرية.</p>
-  </header>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <img src="images/logo.svg" alt="Iram Logo" class="nav-logo">
+            <ul class="nav-links">
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <button id="theme-toggle">🌙</button>
+        </div>
+    </nav>
 
-  <main>
-    <section class="services">
-      <div class="container">
-        <h2>خدماتنا</h2>
-        <ul>
-          <li>تطوير تطبيقات الهواتف (Flutter)</li>
-          <li>تطوير مواقع ونظم رقمية</li>
-          <li>أنظمة رقمية قابلة للتوسع</li>
-          <li>تصميم واجهات مستخدم حديثة</li>
-        </ul>
-      </div>
-    </section>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>مستقبل التقنية يبدأ مع <span class="highlight">Iram</span></h1>
+                <p>نحن نبني الحلول البرمجية التي تدفع عملك نحو القمة باستخدام أحدث التقنيات العالمية.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn primary-btn">اكتشف خدماتنا</a>
+                    <a href="#contact" class="btn secondary-btn">تواصل الآن</a>
+                </div>
+            </div>
+        </div>
+    </header>
 
-    <section class="contact">
-      <div class="container">
-        <h2>تواصل معنا</h2>
-        <p>البريد الإلكتروني: iramfortech@gmail.com</p>
-        <p>GitHub: <a href="https://github.com/iramfortech">iramfortech</a></p>
-      </div>
-    </section>
-  </main>
+    <main>
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">خدماتنا المتميزة</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon">📱</div>
+                        <h3>تطوير تطبيقات Flutter</h3>
+                        <p>تطبيقات سريعة وعصرية تعمل على Android و iOS بكفاءة عالية.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">💻</div>
+                        <h3>تطوير المواقع والأنظمة</h3>
+                        <p>بناء منصات ويب متكاملة، آمنة، وقابلة للتوسع لتناسب احتياجاتكم.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon">🎨</div>
+                        <h3>تصميم واجهات UI/UX</h3>
+                        <p>تجربة مستخدم فريدة تضمن تفاعل العملاء مع منتجك الرقمي بسلاسة.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 Iram For Technology. جميع الحقوق محفوظة.</p>
-    </div>
-  </footer>
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>لنبدأ مشروعك القادم</h2>
+                    <p>فريقنا مستعد لتحويل فكرتك إلى واقع تقني ملموس.</p>
+                    <a href="mailto:iramfortech@gmail.com" class="email-link">iramfortech@gmail.com</a>
+                    <div class="social-links">
+                        <a href="https://github.com/iramfortech">GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- زر التبديل -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-  </script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Iram For Technology. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
 
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        });
+    </script>
 </body>
 </html>
