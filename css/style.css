@@ -16,6 +16,22 @@
     --text-main: #F1F5F9;
     --card-bg: #1E293B;
 }
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: #103567; /* لون شعار إيرام */
+}
+
+.contact-info a {
+    color: #29B6F6; /* اللون اللبني من الشعار للروابط */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
 
 /* ================== التنسيق العام ================== */
 * {
