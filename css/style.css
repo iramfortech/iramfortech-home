@@ -116,14 +116,37 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* منع اهتزاز النص العربي وتثبيت الحجم */
+/* منع اهتزاز النص العربي وتثبيت الحجم ومنع انكسار السطر */
 .contact-box h2, .contact-box p {
-    transition: none !important; /* إلغاء الحركة لمنع القفز */
+    transition: none !important; /* إلغاء أي حركة للمتصفح أثناء التبديل */
     color: #FFFFFF !important;
+    text-align: center;
 }
 
-.contact-box h2 { font-size: 2rem; margin-bottom: 1rem; }
-.contact-box p { font-size: 1rem; opacity: 0.9; }
+.contact-box h2 { 
+    font-size: 2rem; 
+    margin-bottom: 1rem; 
+}
+
+.contact-box p { 
+    font-size: 0.95rem; /* تصغير طفيف جداً لضمان وجود مساحة */
+    opacity: 0.9; 
+    font-weight: 400; /* تثبيت وزن الخط لمنع التمدد */
+    
+    /* الحل الجذري لمنع نزول الكلمات للأسفل (كما في الصور) */
+    white-space: nowrap; 
+    display: inline-block; 
+    width: 100%;
+}
+
+/* للجوال: اسمح بالانكسار فقط في الشاشات الصغيرة جداً لكي لا يختفي النص */
+@media (max-width: 480px) {
+    .contact-box p {
+        white-space: normal; 
+        font-size: 0.9rem;
+    }
+}
+
 
 .email-link { 
     color: #38BDF8 !important; 
