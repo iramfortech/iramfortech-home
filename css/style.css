@@ -1,53 +1,31 @@
-/* ================== المتغيرات والألوان ================== */
+/* ================== 1. المتغيرات والألوان ================== */
 :root {
-    --primary: #1E3A8A; /* أزرق غامق */
-    --accent: #38BDF8;  /* سماوي */
-    --bg-light: #F8FAFC;
-    --text-main: #1E293B;
-    --card-bg: #FFFFFF;
+    --primary: #1E3A8A;     /* أزرق إيرام الداكن */
+    --accent: #38BDF8;      /* لون سماوي للروابط */
+    --bg-light: #F8FAFC;    /* خلفية الصفحة البيضاء */
+    --text-main: #1E293B;   /* لون النص الأساسي */
+    --card-bg: #FFFFFF;     /* خلفية الكروت */
     --transition: all 0.3s ease;
 }
 
-/* الألوان في الوضع الليلي */
+/* تحسينات الوضع الليلي لزيادة الوضوح */
 .dark-mode {
-    --primary: #38BDF8;
-    --accent: #7DD3FC;
-    --bg-light: #0B1220;
-    --text-main: #F1F5F9;
-    --card-bg: #1E293B;
-}
-.contact-info p {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: #103567; /* لون شعار إيرام */
+    --primary: #38BDF8;     /* السماوي يصبح اللون الرئيسي */
+    --accent: #BAE6FD;      /* لون الروابط في الظلام */
+    --bg-light: #0F172A;    /* خلفية داكنة جداً */
+    --text-main: #F8FAFC;   /* نص أبيض ناصع */
+    --card-bg: #1E293B;     /* خلفية الكروت في الظلام */
 }
 
-.contact-info a {
-    color: #29B6F6; /* اللون اللبني من الشعار للروابط */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
-}
-
-
-/* ================== التنسيق العام ================== */
+/* ================== 2. التنسيق العام ================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* اختيار الخط بناءً على اللغة المحددة في HTML */
-[lang="ar"] {
-    font-family: 'Cairo', sans-serif;
-}
-
-[lang="en"] {
-    font-family: 'Inter', sans-serif;
-}
+[lang="ar"] { font-family: 'Cairo', sans-serif; }
+[lang="en"] { font-family: 'Inter', sans-serif; }
 
 body {
     background-color: var(--bg-light);
@@ -63,13 +41,10 @@ body {
     padding: 0 20px;
 }
 
-/* ================== الخلفية المتحركة ================== */
+/* الخلفية المتحركة (شعار الشركة خفيف جداً في الخلفية) */
 .background-pattern {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
+    top: 0; left: 0; width: 200%; height: 200%;
     background-image: url('../images/logo.svg');
     background-repeat: repeat;
     background-size: 80px 80px;
@@ -84,7 +59,7 @@ body {
     100% { transform: translate(-5%, -5%); }
 }
 
-/* ================== شريط التنقل (Navbar) ================== */
+/* ================== 3. شريط التنقل (Navbar) ================== */
 .navbar {
     background: var(--card-bg);
     padding: 0.8rem 0;
@@ -94,34 +69,12 @@ body {
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
-.nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { height: 45px; }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--text-main); font-weight: 700; transition: var(--transition); }
+.nav-links a:hover { color: var(--accent); }
 
-.nav-logo {
-    height: 45px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-main);
-    font-weight: 700;
-    transition: var(--transition);
-}
-
-.nav-links a:hover {
-    color: var(--accent);
-}
-
-/* أزرار التحكم (اللغة والثيم) */
 .lang-btn {
     background: transparent;
     border: 1.5px solid var(--primary);
@@ -133,263 +86,26 @@ body {
     transition: var(--transition);
 }
 
-.lang-btn:hover {
-    background: var(--primary);
-    color: white;
-}
+.lang-btn:hover { background: var(--primary); color: white; }
 
-/* ================== قسم الـ Hero ================== */
-.hero {
-    padding: 8rem 0 5rem;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.highlight {
-    color: var(--primary);
-}
-
-.hero p {
-    font-size: 1.25rem;
-    max-width: 750px;
-    margin: 0 auto 2.5rem;
-    opacity: 0.85;
-}
+/* ================== 4. قسم البداية (Hero Section) ================== */
+.hero { padding: 8rem 0 5rem; text-align: center; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2; }
+.highlight { color: var(--primary); }
+.hero p { font-size: 1.25rem; max-width: 750px; margin: 0 auto 2.5rem; opacity: 0.85; }
 
 .btn {
-    padding: 14px 35px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: var(--transition);
+    padding: 14px 35px; border-radius: 50px;
+    text-decoration: none; font-weight: bold;
+    display: inline-block; transition: var(--transition);
+    cursor: pointer;
 }
 
-.primary-btn {
-    background: var(--primary);
-    color: #fff;
-    margin: 0 10px;
-}
-
-.secondary-btn {
-    border: 2.5px solid var(--primary);
-    color: var(--primary);
-    margin: 0 10px;
-}
-
-.btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* ================== شبكة الخدمات (Services) ================== */
-.services {
-    padding: 5rem 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3.5rem;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-}
-
-.service-card {
-    background: var(--card-bg);
-    padding: 3rem 2rem;
-    border-radius: 25px;
-    text-align: center;
-    transition: var(--transition);
-    border: 1px solid rgba(0,0,0,0.05);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-}
-
-.service-card:hover {
-    transform: translateY(-12px);
-    border-color: var(--accent);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-}
-
-.service-card .icon {
-    font-size: 3.5rem;
-    margin-bottom: 1.5rem;
-    display: block;
-}
-
-.service-card h3 {
-    margin-bottom: 1rem;
-    color: var(--primary);
-}
-
-/* ================== قسم التواصل (Contact) ================== */
-.contact {
-    padding: 5rem 0;
-}
-
-.contact-box {
-    background: var(--primary);
-    color: white;
-    padding: 4rem 2rem;
-    border-radius: 30px;
-    text-align: center;
-}
-
-.contact-box h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.email-link {
-    color: var(--accent);
-    font-size: 1.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    display: block;
-    margin: 1.5rem 0;
-}
-
-.social-links a {
-    color: white;
-    opacity: 0.8;
-    text-decoration: underline;
-}
-
-/* ================== التذييل (Footer) ================== */
-footer {
-    padding: 2.5rem 0;
-    text-align: center;
-    border-top: 1px solid rgba(0,0,0,0.05);
-    opacity: 0.7;
-}
-
-/* ================== التجاوب مع الجوال (Responsive) ================== */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .nav-links {
-        display: none; /* إخفاء القائمة في الجوال لتبسيط التصميم */
-    }
-
-    .hero-btns {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .btn {
-        width: 80%;
-        margin: 0 !important;
-    }
-}
-/* ================== زر الواتساب العائم (التنسيق الجديد) ================== */
-
-.whatsapp-float {
-    position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px; /* يظهر جهة اليمين في المتصفح العربي */
-    background-color: #25d366; /* لون واتساب الرسمي */
-    color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: pulse-whatsapp 2s infinite;
-    text-decoration: none;
-}
-
-.whatsapp-icon {
-    width: 35px;
-    height: 35px;
-    fill: white;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1) rotate(5deg);
-    background-color: #128c7e;
-    box-shadow: 2px 8px 20px rgba(0,0,0,0.4);
-}
-
-/* تأثير النبض لجذب انتباه العميل */
-@keyframes pulse-whatsapp {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-    70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-/* --- تعديلات التوافق مع اللغات --- */
-
-/* عندما تكون الصفحة بالإنجليزية (LTR)، ينتقل الزر لليسار تلقائياً */
-[dir="ltr"] .whatsapp-float {
-    right: auto;
-    left: 40px;
-}
-.hero-slogan {
-    font-family: 'Montserrat', sans-serif; /* الخط الذي اقترحناه سابقاً */
-    color: #103567; /* اللون الأزرق الداكن من الشعار */
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.8;
-    max-width: 900px;
-    margin: 30px auto;
-    text-align: center;
-    padding: 0 20px;
-}
-
-/* تنسيق خاص للهواتف لضمان وضوح النص */
-@media (max-width: 768px) {
-    .hero-slogan {
-        font-size: 1.1rem;
-        line-height: 1.6;
-    }
-}
-
-/* تعديل للهواتف (تصغير الحجم قليلاً) */
-@media (max-width: 768px) {
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 20px;
-        right: 20px;
-    }
-    
-    [dir="ltr"] .whatsapp-float {
-        left: 20px;
-        right: auto;
-    }
-
-    .whatsapp-icon {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-
-/* ================== تكملة قسم الـ Hero (الأزرار) ================== */
-.primary-btn { background: var(--primary); color: #fff; margin: 0 10px; }
-.secondary-btn { border: 2.5px solid var(--primary); color: var(--primary); margin: 0 10px; }
+.primary-btn { background: var(--primary); color: #fff; margin: 0 10px; border: none; }
+.secondary-btn { border: 2.5px solid var(--primary); color: var(--primary); margin: 0 10px; background: transparent; }
 .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 
-/* ================== شبكة الخدمات (Services) ================== */
+/* ================== 5. قسم الخدمات ================== */
 .services { padding: 5rem 0; }
 .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3.5rem; }
 .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
@@ -401,43 +117,87 @@ footer {
 .service-card:hover { transform: translateY(-12px); border-color: var(--accent); }
 .service-card .icon { font-size: 3.5rem; margin-bottom: 1.5rem; display: block; }
 
-/* ================== قسم التواصل (التعديل الأخير) ================== */
+/* ================== 6. قسم التواصل (تم تحسين الوضوح هنا) ================== */
 .contact { padding: 5rem 0; }
-.contact-box { background: var(--primary); color: white; padding: 4rem 2rem; border-radius: 30px; text-align: center; }
-.email-link { color: var(--accent); font-size: 1.5rem; text-decoration: none; font-weight: bold; display: block; margin: 1.5rem 0; }
+.contact-box { 
+    background: #1E3A8A; /* لون إيرام الداكن ثابت للخلفية */
+    color: #FFFFFF !important; /* النص دائماً أبيض للوضوح */
+    padding: 4rem 2rem; 
+    border-radius: 30px; 
+    text-align: center; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.contact-box h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #FFFFFF; }
+.contact-box p { color: #E2E8F0; }
+
+.email-link { 
+    color: #38BDF8; /* لون سماوي فاتح للايميل */
+    font-size: 1.5rem; 
+    text-decoration: none; 
+    font-weight: bold; 
+    display: block; 
+    margin: 1.5rem 0; 
+}
 
 .phone-display { margin-top: 15px; font-size: 1.3rem; font-weight: bold; }
-.phone-display a { color: var(--accent); text-decoration: none; transition: var(--transition); }
-.phone-display a:hover { letter-spacing: 1px; }
+.phone-display a { 
+    color: #FFFFFF; /* الرقم أبيض */
+    text-decoration: none; 
+    transition: var(--transition); 
+    border-bottom: 1px solid #38BDF8;
+}
 
-/* ================== زر الواتساب العائم ================== */
+.phone-display a:hover { color: #38BDF8; }
+
+/* ================== 7. زر الواتساب العائم (تم ضبط التوازن) ================== */
 .whatsapp-float {
-    position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
-    background-color: #25d366; border-radius: 50px;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 1000;
+    position: fixed; 
+    width: 60px; 
+    height: 60px; 
+    bottom: 40px; 
+    right: 40px;
+    background-color: #25d366; 
+    border-radius: 50%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; /* توسيط حقيقي */
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3); 
+    z-index: 1000;
+    text-decoration: none;
+    transition: all 0.3s ease;
     animation: pulse-whatsapp 2s infinite;
 }
-.whatsapp-icon { width: 35px; height: 35px; fill: white; }
 
-/* تبديل مكان الزر حسب اتجاه اللغة */
-[dir="ltr"] .whatsapp-float { right: auto; left: 40px; }
+.whatsapp-icon { 
+    width: 32px; 
+    height: 32px; 
+    fill: white; 
+    display: block;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #128c7e;
+}
 
 @keyframes pulse-whatsapp {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-    70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-/* ================== التذييل (Footer) ================== */
-footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); opacity: 0.7; }
+/* تبديل مكان الزر عند تحويل اللغة للإنجليزية */
+[dir="ltr"] .whatsapp-float { right: auto; left: 40px; }
 
-/* ================== التجاوب مع الجوال ================== */
+/* ================== 8. التذييل (Footer) ================== */
+footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); opacity: 0.8; }
+
+/* ================== 9. التجاوب مع الجوال ================== */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
+    .hero-btns { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+    .btn { width: 90%; }
     .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
-    [dir="ltr"] .whatsapp-float { left: 20px; right: auto; }
 }
-
-
