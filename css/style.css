@@ -278,3 +278,72 @@ footer {
         margin: 0 !important;
     }
 }
+/* ================== زر الواتساب العائم (التنسيق الجديد) ================== */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px; /* يظهر جهة اليمين في المتصفح العربي */
+    background-color: #25d366; /* لون واتساب الرسمي */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: pulse-whatsapp 2s infinite;
+    text-decoration: none;
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    fill: white;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: #128c7e;
+    box-shadow: 2px 8px 20px rgba(0,0,0,0.4);
+}
+
+/* تأثير النبض لجذب انتباه العميل */
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* --- تعديلات التوافق مع اللغات --- */
+
+/* عندما تكون الصفحة بالإنجليزية (LTR)، ينتقل الزر لليسار تلقائياً */
+[dir="ltr"] .whatsapp-float {
+    right: auto;
+    left: 40px;
+}
+
+/* تعديل للهواتف (تصغير الحجم قليلاً) */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    [dir="ltr"] .whatsapp-float {
+        left: 20px;
+        right: auto;
+    }
+
+    .whatsapp-icon {
+        width: 28px;
+        height: 28px;
+    }
+}
