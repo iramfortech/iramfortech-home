@@ -87,7 +87,7 @@ body {
 /* جعل الإيميل والرقم بلون سماوي فاتح جداً وخط أنحف للوضوح */
 .email-link { 
     color: #BAE6FD !important; 
-    font-size: 1.4rem; 
+    font-size: 1.1rem; 
     text-decoration: none; 
     font-weight: 300; /* خط أنحف ليكون أوضح */
     display: block; 
@@ -95,7 +95,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.phone-display { margin-top: 15px; font-size: 1.2rem; font-weight: 400; }
+.phone-display { margin-top: 15px; font-size: 1rem; font-weight: 300; }
 .phone-display a { 
     color: #F8FAFC !important; /* لون أبيض مائل للرمادي الفاتح جداً */
     text-decoration: none;
