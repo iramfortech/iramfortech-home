@@ -5,164 +5,21 @@
     --bg-light: #F8FAFC;
     --text-main: #1E293B;
     --card-bg: #FFFFFF;
-    --transition: all 0.3s ease;
+    /* تحسين الانتقال لمنع اهتزاز الخطوط */
+    --transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-/* تحسينات الوضع الليلي لضمان وضوح الإيميل والرقم */
 .dark-mode {
-    --primary: #0EA5E9;   /* سماوي أوضح */
-    --accent: #7DD3FC;    /* لون فاتح جداً للروابط */
-    --bg-light: #0B0F1A;  /* خلفية داكنة جداً */
-    --text-main: #E2E8F0; /* نص مريح للعين */
-    --card-bg: #161B22;
+    --primary: #38BDF8;
+    --accent: #BAE6FD;
+    --bg-light: #0F172A;
+    --text-main: #F8FAFC;
+    --card-bg: #1E293B;
 }
 
 /* ================== 2. التنسيق العام ================== */
 * {
     margin: 0; padding: 0; box-sizing: border-box;
-}
-
-[lang="ar"] { font-family: 'Cairo', sans-serif; }
-[lang="en"] { font-family: 'Inter', sans-serif; }
-
-body {
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    line-height: 1.6;
-    transition: var(--transition);
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ================== 3. Navbar ================== */
-.navbar {
-    background: var(--card-bg);
-    padding: 10px 0;
-    position: sticky; top: 0; z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { height: 40px; }
-.nav-links { list-style: none; display: flex; gap: 20px; }
-.nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; }
-
-.lang-btn {
-    background: transparent; border: 1.5px solid var(--primary);
-    color: var(--primary); padding: 5px 15px; border-radius: 20px;
-    cursor: pointer; font-weight: bold;
-}
-
-/* ================== 4. Hero Section ================== */
-.hero { padding: 100px 20px; text-align: center; }
-.hero h1 { font-size: 3rem; margin-bottom: 20px; }
-.highlight { color: var(--primary); }
-.hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto 30px; }
-
-.btn {
-    padding: 12px 30px; border-radius: 50px;
-    text-decoration: none; font-weight: bold; display: inline-block;
-    transition: var(--transition);
-}
-
-.primary-btn { background: var(--primary); color: #fff; margin: 5px; }
-.secondary-btn { border: 2px solid var(--primary); color: var(--primary); margin: 5px; }
-
-/* ================== 5. قسم التواصل (حل مشكلة الوضوح) ================== */
-.contact { padding: 60px 20px; }
-.contact-box { 
-    background: #1E3A8A; /* لون ثابت وقوي لخلفية الصندوق */
-    color: #FFFFFF !important; 
-    padding: 50px 30px; 
-    border-radius: 25px; 
-    text-align: center;
-}
-
-.contact-box h2 { font-size: 2.2rem; margin-bottom: 15px; color: #FFFFFF; }
-
-/* جعل الإيميل والرقم بلون سماوي فاتح جداً وخط أنحف للوضوح */
-.email-link { 
-    color: #BAE6FD !important; 
-    font-size: 1.1rem; 
-    text-decoration: none; 
-    font-weight: 300; /* خط أنحف ليكون أوضح */
-    display: block; 
-    margin: 20px 0;
-    letter-spacing: 0.5px;
-}
-
-.phone-display { margin-top: 15px; font-size: 1rem; font-weight: 300; }
-.phone-display a { 
-    color: #F8FAFC !important; /* لون أبيض مائل للرمادي الفاتح جداً */
-    text-decoration: none;
-    border-bottom: 1px solid #38BDF8;
-    padding-bottom: 2px;
-}
-
-/* تحسينات إضافية للوضع الليلي */
-.dark-mode .contact-box {
-    background: #1e293b; /* تغيير لون الصندوق في الوضع الليلي لزيادة التباين */
-    border: 1px solid #334155;
-}
-
-/* ================== 6. زر الواتساب (توسيط وتوازن تام) ================== */
-.whatsapp-float {
-    position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
-    background-color: #25d366; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000;
-    text-decoration: none;
-}
-
-.whatsapp-icon { 
-    width: 34px; height: 34px; 
-    fill: white; 
-    display: block;
-    /* تأكيد التوسيط داخل الـ SVG */
-    margin: auto; 
-}
-
-.whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
-
-[dir="ltr"] .whatsapp-float { right: auto; left: 40px; }
-
-/* ================== 7. Footer ================== */
-footer { padding: 30px 0; text-align: center; opacity: 0.8; font-size: 0.9rem; }
-
-/* ================== 8. الجوال ================== */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .nav-links { display: none; }
-    .email-link { font-size: 1.2rem; }
-}
-/* ================== 1. المتغيرات والألوان ================== */
-:root {
-    --primary: #1E3A8A;     /* أزرق إيرام الداكن */
-    --accent: #38BDF8;      /* لون سماوي للروابط */
-    --bg-light: #F8FAFC;    /* خلفية الصفحة البيضاء */
-    --text-main: #1E293B;   /* لون النص الأساسي */
-    --card-bg: #FFFFFF;     /* خلفية الكروت */
-    --transition: all 0.3s ease;
-}
-
-/* تحسينات الوضع الليلي لزيادة الوضوح */
-.dark-mode {
-    --primary: #38BDF8;     /* السماوي يصبح اللون الرئيسي */
-    --accent: #BAE6FD;      /* لون الروابط في الظلام */
-    --bg-light: #0F172A;    /* خلفية داكنة جداً */
-    --text-main: #F8FAFC;   /* نص أبيض ناصع */
-    --card-bg: #1E293B;     /* خلفية الكروت في الظلام */
-}
-
-/* ================== 2. التنسيق العام ================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
 
 [lang="ar"] { font-family: 'Cairo', sans-serif; }
@@ -182,7 +39,7 @@ body {
     padding: 0 20px;
 }
 
-/* الخلفية المتحركة (شعار الشركة خفيف جداً في الخلفية) */
+/* الخلفية المتحركة */
 .background-pattern {
     position: fixed;
     top: 0; left: 0; width: 200%; height: 200%;
@@ -200,46 +57,35 @@ body {
     100% { transform: translate(-5%, -5%); }
 }
 
-/* ================== 3. شريط التنقل (Navbar) ================== */
+/* ================== 3. Navbar ================== */
 .navbar {
     background: var(--card-bg);
     padding: 0.8rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; top: 0; z-index: 1000;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
 .nav-logo { height: 45px; }
 .nav-links { list-style: none; display: flex; gap: 2rem; }
-.nav-links a { text-decoration: none; color: var(--text-main); font-weight: 700; transition: var(--transition); }
-.nav-links a:hover { color: var(--accent); }
+.nav-links a { text-decoration: none; color: var(--text-main); font-weight: 700; transition: color 0.3s; }
 
 .lang-btn {
-    background: transparent;
-    border: 1.5px solid var(--primary);
-    color: var(--primary);
-    padding: 5px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: var(--transition);
+    background: transparent; border: 1.5px solid var(--primary);
+    color: var(--primary); padding: 5px 15px; border-radius: 20px;
+    cursor: pointer; font-weight: bold;
 }
 
-.lang-btn:hover { background: var(--primary); color: white; }
-
-/* ================== 4. قسم البداية (Hero Section) ================== */
+/* ================== 4. Hero Section ================== */
 .hero { padding: 8rem 0 5rem; text-align: center; }
-.hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; line-height: 1.2; }
+.hero h1 { font-size: 3.5rem; margin-bottom: 1.5rem; }
 .highlight { color: var(--primary); }
 .hero p { font-size: 1.25rem; max-width: 750px; margin: 0 auto 2.5rem; opacity: 0.85; }
 
 .btn {
     padding: 14px 35px; border-radius: 50px;
-    text-decoration: none; font-weight: bold;
-    display: inline-block; transition: var(--transition);
-    cursor: pointer;
+    text-decoration: none; font-weight: bold; display: inline-block;
+    cursor: pointer; transition: var(--transition);
 }
 
 .primary-btn { background: var(--primary); color: #fff; margin: 0 10px; border: none; }
@@ -258,87 +104,66 @@ body {
 .service-card:hover { transform: translateY(-12px); border-color: var(--accent); }
 .service-card .icon { font-size: 3.5rem; margin-bottom: 1.5rem; display: block; }
 
-/* ================== 6. قسم التواصل (تم تحسين الوضوح هنا) ================== */
+/* ================== 6. قسم التواصل (تم الإصلاح النهائي) ================== */
 .contact { padding: 5rem 0; }
 .contact-box { 
-    background: #1E3A8A; /* لون إيرام الداكن ثابت للخلفية */
-    color: #FFFFFF !important; /* النص دائماً أبيض للوضوح */
+    background: #1E3A8A; 
+    color: #FFFFFF !important; 
     padding: 4rem 2rem; 
     border-radius: 30px; 
     text-align: center; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
 }
 
-.contact-box h2 { font-size: 2.5rem; margin-bottom: 1rem; color: #FFFFFF; }
-.contact-box p { color: #E2E8F0; }
+/* منع اهتزاز النص العربي وتثبيت الحجم */
+.contact-box h2, .contact-box p {
+    transition: none !important; /* إلغاء الحركة لمنع القفز */
+    color: #FFFFFF !important;
+}
+
+.contact-box h2 { font-size: 2rem; margin-bottom: 1rem; }
+.contact-box p { font-size: 1rem; opacity: 0.9; }
 
 .email-link { 
-    color: #38BDF8; /* لون سماوي فاتح للايميل */
-    font-size: 1.5rem; 
+    color: #38BDF8 !important; 
+    font-size: 0.9rem; /* حجم صغير */
     text-decoration: none; 
-    font-weight: bold; 
+    font-weight: 200; 
     display: block; 
     margin: 1.5rem 0; 
 }
 
-.phone-display { margin-top: 15px; font-size: 1.3rem; font-weight: bold; }
+.phone-display { margin-top: 15px; font-size: 0.9rem; font-weight: 200; }
 .phone-display a { 
-    color: #FFFFFF; /* الرقم أبيض */
+    color: #FFFFFF !important; 
     text-decoration: none; 
-    transition: var(--transition); 
-    border-bottom: 1px solid #38BDF8;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.5);
 }
 
-.phone-display a:hover { color: #38BDF8; }
+.dark-mode .contact-box { background: #1E293B; }
 
-/* ================== 7. زر الواتساب العائم (تم ضبط التوازن) ================== */
+/* ================== 7. زر الواتساب ================== */
 .whatsapp-float {
-    position: fixed; 
-    width: 60px; 
-    height: 60px; 
-    bottom: 40px; 
-    right: 40px;
-    background-color: #25d366; 
-    border-radius: 50%;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; /* توسيط حقيقي */
-    box-shadow: 2px 5px 15px rgba(0,0,0,0.3); 
-    z-index: 1000;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    animation: pulse-whatsapp 2s infinite;
+    position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+    background-color: #25d366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.whatsapp-icon { 
-    width: 32px; 
-    height: 32px; 
-    fill: white; 
-    display: block;
-}
+.whatsapp-icon { width: 32px; height: 32px; fill: white; display: block; margin: auto; }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #128c7e;
-}
+.whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
 
-@keyframes pulse-whatsapp {
-    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
-    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-}
-
-/* تبديل مكان الزر عند تحويل اللغة للإنجليزية */
 [dir="ltr"] .whatsapp-float { right: auto; left: 40px; }
 
-/* ================== 8. التذييل (Footer) ================== */
-footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); opacity: 0.8; }
+/* ================== 8. Footer ================== */
+footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem; }
 
-/* ================== 9. التجاوب مع الجوال ================== */
+/* ================== 9. الجوال ================== */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
-    .hero-btns { display: flex; flex-direction: column; gap: 10px; align-items: center; }
-    .btn { width: 90%; }
-    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+    .btn { width: 90%; margin: 5px 0; }
 }
