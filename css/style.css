@@ -157,7 +157,7 @@ body {
     margin: 1.5rem 0; 
 }
 
-.phone-display { margin-top: 15px; font-size: 0.9rem; font-weight: 300; }
+.phone-display { margin-top: 15px; font-size: 1rem; font-weight: 400; }
 .phone-display a { 
     color: #FFFFFF !important; 
     text-decoration: none; 
