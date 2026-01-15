@@ -327,6 +327,25 @@ footer {
     right: auto;
     left: 40px;
 }
+.hero-slogan {
+    font-family: 'Montserrat', sans-serif; /* الخط الذي اقترحناه سابقاً */
+    color: #103567; /* اللون الأزرق الداكن من الشعار */
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* تنسيق خاص للهواتف لضمان وضوح النص */
+@media (max-width: 768px) {
+    .hero-slogan {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+}
 
 /* تعديل للهواتف (تصغير الحجم قليلاً) */
 @media (max-width: 768px) {
