@@ -89,7 +89,7 @@ body {
     color: #BAE6FD !important; 
     font-size: 1.4rem; 
     text-decoration: none; 
-    font-weight: 500; /* خط أنحف ليكون أوضح */
+    font-weight: 300; /* خط أنحف ليكون أوضح */
     display: block; 
     margin: 20px 0;
     letter-spacing: 0.5px;
