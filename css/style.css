@@ -382,3 +382,62 @@ footer {
         height: 28px;
     }
 }
+
+
+/* ================== تكملة قسم الـ Hero (الأزرار) ================== */
+.primary-btn { background: var(--primary); color: #fff; margin: 0 10px; }
+.secondary-btn { border: 2.5px solid var(--primary); color: var(--primary); margin: 0 10px; }
+.btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+
+/* ================== شبكة الخدمات (Services) ================== */
+.services { padding: 5rem 0; }
+.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 3.5rem; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
+.service-card {
+    background: var(--card-bg); padding: 3rem 2rem; border-radius: 25px;
+    text-align: center; transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.service-card:hover { transform: translateY(-12px); border-color: var(--accent); }
+.service-card .icon { font-size: 3.5rem; margin-bottom: 1.5rem; display: block; }
+
+/* ================== قسم التواصل (التعديل الأخير) ================== */
+.contact { padding: 5rem 0; }
+.contact-box { background: var(--primary); color: white; padding: 4rem 2rem; border-radius: 30px; text-align: center; }
+.email-link { color: var(--accent); font-size: 1.5rem; text-decoration: none; font-weight: bold; display: block; margin: 1.5rem 0; }
+
+.phone-display { margin-top: 15px; font-size: 1.3rem; font-weight: bold; }
+.phone-display a { color: var(--accent); text-decoration: none; transition: var(--transition); }
+.phone-display a:hover { letter-spacing: 1px; }
+
+/* ================== زر الواتساب العائم ================== */
+.whatsapp-float {
+    position: fixed; width: 60px; height: 60px; bottom: 40px; right: 40px;
+    background-color: #25d366; border-radius: 50px;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 1000;
+    animation: pulse-whatsapp 2s infinite;
+}
+.whatsapp-icon { width: 35px; height: 35px; fill: white; }
+
+/* تبديل مكان الزر حسب اتجاه اللغة */
+[dir="ltr"] .whatsapp-float { right: auto; left: 40px; }
+
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+    70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ================== التذييل (Footer) ================== */
+footer { padding: 2.5rem 0; text-align: center; border-top: 1px solid rgba(0,0,0,0.05); opacity: 0.7; }
+
+/* ================== التجاوب مع الجوال ================== */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.2rem; }
+    .nav-links { display: none; }
+    .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
+    [dir="ltr"] .whatsapp-float { left: 20px; right: auto; }
+}
+
+
