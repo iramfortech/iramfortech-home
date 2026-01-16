@@ -5,7 +5,6 @@
     --bg-light: #F8FAFC;
     --text-main: #1E293B;
     --card-bg: #FFFFFF;
-    /* تحسين الانتقال لمنع اهتزاز الخطوط */
     --transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -57,15 +56,50 @@ body {
     100% { transform: translate(-5%, -5%); }
 }
 
-/* ================== 3. Navbar ================== */
+/* ================== 3. Navbar & Logo (تم التعديل هنا) ================== */
 .navbar {
     background: var(--card-bg);
-    padding: 0.8rem 0;
+    padding: 0.6rem 0;
     position: sticky; top: 0; z-index: 1000;
     box-shadow: 0 2px 15px rgba(0,0,0,0.05);
 }
 
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    overflow: visible;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    height: 100%;
+}
+
+.nav-logo {
+    /* التحكم الحاسم في حجم الـ SVG المرفوع (512px) */
+    height: 45px !important;
+    width: 45px !important;
+    max-height: 45px !important;
+    max-width: 45px !important;
+    object-fit: contain !important;
+    display: inline-block;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* منع اهتزاز اسم البراند وثباته */
+[data-i18n="nav-brand"] {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    white-space: nowrap;
+    display: inline-block;
+    transition: none !important; 
+}
 
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 700; transition: color 0.3s; }
@@ -104,7 +138,7 @@ body {
 .service-card:hover { transform: translateY(-12px); border-color: var(--accent); }
 .service-card .icon { font-size: 3.5rem; margin-bottom: 1.5rem; display: block; }
 
-/* ================== 6. قسم التواصل (تم الإصلاح النهائي) ================== */
+/* ================== 6. قسم التواصل ================== */
 .contact { padding: 5rem 0; }
 .contact-box { 
     background: #1E3A8A; 
@@ -116,41 +150,26 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* منع اهتزاز النص العربي وتثبيت الحجم ومنع انكسار السطر */
 .contact-box h2, .contact-box p {
-    transition: none !important; /* إلغاء أي حركة للمتصفح أثناء التبديل */
+    transition: none !important; 
     color: #FFFFFF !important;
     text-align: center;
 }
 
-.contact-box h2 { 
-    font-size: 2rem; 
-    margin-bottom: 1rem; 
-}
+.contact-box h2 { font-size: 2rem; margin-bottom: 1rem; }
 
 .contact-box p { 
-    font-size: 0.95rem; /* تصغير طفيف جداً لضمان وجود مساحة */
+    font-size: 0.95rem; 
     opacity: 0.9; 
-    font-weight: 400; /* تثبيت وزن الخط لمنع التمدد */
-    
-    /* الحل الجذري لمنع نزول الكلمات للأسفل (كما في الصور) */
+    font-weight: 400; 
     white-space: nowrap; 
     display: inline-block; 
     width: 100%;
 }
 
-/* للجوال: اسمح بالانكسار فقط في الشاشات الصغيرة جداً لكي لا يختفي النص */
-@media (max-width: 480px) {
-    .contact-box p {
-        white-space: normal; 
-        font-size: 0.9rem;
-    }
-}
-
-
 .email-link { 
     color: #38BDF8 !important; 
-    font-size: 1.1rem; /* حجم صغير */
+    font-size: 1.1rem; 
     text-decoration: none; 
     font-weight: 400; 
     display: block; 
@@ -176,76 +195,46 @@ body {
 }
 
 .whatsapp-icon { width: 32px; height: 32px; fill: white; display: block; margin: auto; }
-
 .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
-
 [dir="ltr"] .whatsapp-float { right: auto; left: 40px; }
 
 /* ================== 8. Footer ================== */
 footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem; }
 
-/* ================== 9. الجوال ================== */
+/* ================== 9. الجوال (تحسينات الشعار والجسم) ================== */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
     .btn { width: 90%; margin: 5px 0; }
-}
-
-
-
-/* ================== تنسيق الشعار والنص المترجم ================== */
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-}
-
-.nav-logo {
-    /* إجبار الصورة على حجم الهيدر */
-    height: 45px !important;
-    width: 45px !important;
     
-    /* منع الـ SVG من تجاوز الحدود المسموحة */
-    max-height: 45px !important;
-    max-width: 45px !important;
+    /* تصغير الشعار قليلاً في الجوال ليتناسق مع الهيدر */
+    .nav-logo {
+        height: 38px !important;
+        width: 38px !important;
+        max-height: 38px !important;
+        max-width: 38px !important;
+    }
     
-    /* الحفاظ على تناسق الأبعاد */
-    object-fit: contain !important;
-    
-    /* التأكد من أن المتصفح يعاملها كعنصر مرئي */
-    display: inline-block;
-    vertical-align: middle;
+    [data-i18n="nav-brand"] {
+        font-size: 1.1rem;
+    }
+
+    .contact-box p {
+        white-space: normal; 
+        font-size: 0.9rem;
+    }
 }
 
-/* لضمان أن الحاوية لا تكتم الصورة */
-.logo-wrapper {
-    display: flex;
-    align-items: center;
-    height: 100%; /* اجعل الارتفاع متناسب مع الهيدر */
-}
-
-
-/* لمنع الصورة من الاختفاء خلف العناصر الأخرى */
-.nav-container {
-    display: flex;
-    align-items: center;
-    overflow: visible;
-}
-
-
-/* لمنع اهتزاز الاسم عند تبديل اللغة أو الثيم */
-[data-i18n="nav-brand"] {
-    font-weight: 700;
-    font-size: 1.25rem;
-    color: var(--text-main);
-    white-space: nowrap;
-    display: inline-block;
-    transition: none !important; /* لثبات النص تماماً */
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero p { font-size: 1rem; }
 }
 
 /* تحسينات الوضع الليلي للشعار */
 .dark-mode .nav-logo {
+    /* جعل الشعار يبرز في الخلفية الداكنة */
     filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.3));
 }
 
+/* إذا كان الشعار أسود تماماً، سيقوم هذا الكود بتحويله للأبيض في الوضع المظلم */
+/* .dark-mode .nav-logo { filter: brightness(0) invert(1); } */
