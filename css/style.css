@@ -80,26 +80,30 @@ body {
 }
 
 .nav-logo {
-    /* الارتفاع المثالي للشعار بجانب النص */
-    height: 38px !important; 
+    /* تصغير الارتفاع ليكون متناسقاً مع الخط */
+    height: 32px !important; 
     width: auto !important; 
     
-    /* إلغاء التكبير لأن الصورة أصبحت تشغل المساحة كاملة */
+    /* إلغاء أي تكبير (scale) سابق */
     transform: scale(1) !important; 
     
-    /* ضمان عدم تمدد الصورة بشكل مشوه */
-    object-fit: contain !important;
+    /* التأكد من ثبات المكان */
     display: inline-block;
     vertical-align: middle;
-
-    /* إضافة مسافة بسيطة بين الشعار والنص */
-    margin-left: 10px;
+    object-fit: contain;
+    
+    /* إضافة مسافة بسيطة من اليمين (لأن الموقع RTL) */
+    margin-right: 8px;
+    
+    /* تحسين جودة الصورة */
+    image-rendering: -webkit-optimize-contrast;
 }
 
+
 /* تعديل بسيط للجوال ليكون الشعار متناسقاً */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .nav-logo {
-        height: 32px !important;
+        height: 28px !important;
     }
 }
 
