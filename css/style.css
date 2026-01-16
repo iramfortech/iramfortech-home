@@ -80,7 +80,6 @@ body {
 }
 
 .nav-logo {
-    /* التحكم الحاسم في حجم الـ SVG المرفوع (512px) */
     height: 45px !important;
     width: 45px !important;
     max-height: 45px !important;
@@ -88,8 +87,14 @@ body {
     object-fit: contain !important;
     display: inline-block;
     vertical-align: middle;
-    transition: transform 0.3s ease;
+    
+    /* التعديل الجديد: تكبير الصورة 3 أضعاف لتجاوز الفراغ الأبيض */
+    transform: scale(3); 
+    /* قد تحتاج لضبط الهوامش لأن التكبير قد يغطي على النص */
+    margin-left: 15px; 
+    margin-right: 15px;
 }
+
 
 /* منع اهتزاز اسم البراند وثباته */
 [data-i18n="nav-brand"] {
