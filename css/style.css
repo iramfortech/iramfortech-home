@@ -247,6 +247,15 @@ footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem
     .hero h1 { font-size: 1.8rem; }
     .hero p { font-size: 1rem; }
 }
+/* تخفيف نمط الخلفية في الوضع الليلي */
+.dark-mode .background-pattern {
+    /* الشفافية الحالية كانت 0.03، سنجعلها 0.01 أو 0.015 لتكون أخف بكثير */
+    opacity: 0.015 !important; 
+    
+    /* اختيارياً: يمكنك جعل الخلفية تميل للسواد أكثر لتقليل التباين */
+    filter: brightness(0.5);
+}
+
 
 /* تحسينات الوضع الليلي للشعار */
 .dark-mode .nav-logo {
