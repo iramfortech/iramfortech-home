@@ -66,26 +66,6 @@ body {
 }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { height: 45px; }
-
-.nav-logo2 {
-    height: 55px;      /* ارتفاع مناسب جداً للموبايل والكمبيوتر */
-    width: auto;       /* يحافظ على النسبة المربعة */
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-/* حركة بسيطة عند تمرير الماوس فوق الشعار */
-.nav-logo2:hover {
-    transform: scale(1.05);
-}
-
-/* تحسين المظهر في الوضع الليلي */
-.dark-mode .nav-logo2 {
-    /* إذا كان شعارك غامقاً ولا يظهر في السواد، يمكنك إضافة فلتر بسيط */
-    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
-}
-
 
 .nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 700; transition: color 0.3s; }
@@ -210,3 +190,36 @@ footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem
     .nav-links { display: none; }
     .btn { width: 90%; margin: 5px 0; }
 }
+
+
+
+/* ================== تنسيق الشعار والنص المترجم ================== */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 45px;      /* تأكد أن هذا الارتفاع يناسب شعارك */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* لمنع اهتزاز الاسم عند تبديل اللغة أو الثيم */
+[data-i18n="nav-brand"] {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    white-space: nowrap;
+    display: inline-block;
+    transition: none !important; /* لثبات النص تماماً */
+}
+
+/* تحسينات الوضع الليلي للشعار */
+.dark-mode .nav-logo {
+    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.3));
+}
+
