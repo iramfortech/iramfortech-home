@@ -202,11 +202,31 @@ footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem
 }
 
 .nav-logo {
-    height: 45px;      /* تأكد أن هذا الارتفاع يناسب شعارك */
-    width: auto;
+    /* تحديد الارتفاع بدقة (pixels) هو الأهم لصور SVG */
+    height: 45px !important; 
+    width: 45px !important; /* بما أن صورتك مربعة 512x512 */
+    
+    /* لضمان عدم تمدد الصورة خارج الحدود */
+    max-height: 45px;
+    max-width: 45px;
+    
+    /* الحفاظ على تناسق الشعار داخل المربع */
     object-fit: contain;
+    
+    /* منع أي إزاحة للنصوص المجاورة */
+    display: inline-block;
+    vertical-align: middle;
+    
     transition: transform 0.3s ease;
 }
+
+/* لمنع الصورة من الاختفاء خلف العناصر الأخرى */
+.nav-container {
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
 
 /* لمنع اهتزاز الاسم عند تبديل اللغة أو الثيم */
 [data-i18n="nav-brand"] {
