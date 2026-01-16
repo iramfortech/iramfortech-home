@@ -45,10 +45,11 @@ body {
     background-image: url('../images/logo.svg');
     background-repeat: repeat;
     background-size: 80px 80px;
-    opacity: 0.03;
+    opacity: 0.03; /* الشفافية في الوضع الفاتح */
     animation: movePattern 100s linear infinite;
     pointer-events: none;
     z-index: -1;
+    transition: opacity 0.3s ease;
 }
 
 @keyframes movePattern {
@@ -56,7 +57,7 @@ body {
     100% { transform: translate(-5%, -5%); }
 }
 
-/* ================== 3. Navbar & Logo (تم التعديل هنا) ================== */
+/* ================== 3. Navbar & Logo ================== */
 .navbar {
     background: var(--card-bg);
     padding: 0.6rem 0;
@@ -80,36 +81,17 @@ body {
 }
 
 .nav-logo {
-    /* تصغير الارتفاع ليكون متناسقاً مع الخط */
     height: 32px !important; 
     width: auto !important; 
-    
-    /* إلغاء أي تكبير (scale) سابق */
     transform: scale(1) !important; 
-    
-    /* التأكد من ثبات المكان */
     display: inline-block;
     vertical-align: middle;
     object-fit: contain;
-    
-    /* إضافة مسافة بسيطة من اليمين (لأن الموقع RTL) */
     margin-right: 8px;
-    
-    /* تحسين جودة الصورة */
     image-rendering: -webkit-optimize-contrast;
+    transition: filter 0.3s ease, opacity 0.3s ease;
 }
 
-
-/* تعديل بسيط للجوال ليكون الشعار متناسقاً */
-@media (max-width: 480px) {
-    .nav-logo {
-        height: 28px !important;
-    }
-}
-
-
-
-/* منع اهتزاز اسم البراند وثباته */
 [data-i18n="nav-brand"] {
     font-weight: 700;
     font-size: 1.25rem;
@@ -219,18 +201,28 @@ body {
 /* ================== 8. Footer ================== */
 footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem; }
 
-/* ================== 9. الجوال (تحسينات الشعار والجسم) ================== */
+/* ================== 9. الجوال والوضع الليلي المحسن ================== */
+
+/* تخفيف نمط الخلفية في الوضع الليلي */
+.dark-mode .background-pattern {
+    opacity: 0.01 !important; /* تخفيف جداً لنمط الشعار في الخلفية */
+    filter: brightness(0.4);
+}
+
+/* تحسينات الوضع الليلي للشعار (تخفيف اللون) */
+.dark-mode .nav-logo {
+    opacity: 0.8; /* تخفيف شفافية الشعار ليدمج مع الخلفية */
+    filter: brightness(0.9) drop-shadow(0 0 3px rgba(56, 189, 248, 0.2));
+}
+
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.2rem; }
     .nav-links { display: none; }
     .btn { width: 90%; margin: 5px 0; }
     
-    /* تصغير الشعار قليلاً في الجوال ليتناسق مع الهيدر */
     .nav-logo {
-        height: 38px !important;
-        width: 38px !important;
-        max-height: 38px !important;
-        max-width: 38px !important;
+        height: 28px !important;
+        margin-right: 5px;
     }
     
     [data-i18n="nav-brand"] {
@@ -246,22 +238,5 @@ footer { padding: 2.5rem 0; text-align: center; opacity: 0.8; font-size: 0.85rem
 @media (max-width: 480px) {
     .hero h1 { font-size: 1.8rem; }
     .hero p { font-size: 1rem; }
+    .nav-logo { height: 26px !important; }
 }
-/* تخفيف نمط الخلفية في الوضع الليلي */
-.dark-mode .background-pattern {
-    /* الشفافية الحالية كانت 0.03، سنجعلها 0.01 أو 0.015 لتكون أخف بكثير */
-    opacity: 0.015 !important; 
-    
-    /* اختيارياً: يمكنك جعل الخلفية تميل للسواد أكثر لتقليل التباين */
-    filter: brightness(0.5);
-}
-
-
-/* تحسينات الوضع الليلي للشعار */
-.dark-mode .nav-logo {
-    /* جعل الشعار يبرز في الخلفية الداكنة */
-    filter: drop-shadow(0 0 5px rgba(56, 189, 248, 0.3));
-}
-
-/* إذا كان الشعار أسود تماماً، سيقوم هذا الكود بتحويله للأبيض في الوضع المظلم */
-/* .dark-mode .nav-logo { filter: brightness(0) invert(1); } */
